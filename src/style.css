@@ -1,13 +1,12 @@
 body {
   font-family: 'Work Sans', sans-serif;
   min-height: 100svh;
-  min-width: 100svw;
 
   background-image: url('./assets/images/background-pattern-desktop.svg');
   background-repeat: no-repeat;
   background-color: var(--light-pink);
   background-size: contain;
-  background-position: top center;
+  background-position: top top;
 
   display: flex;
   flex-direction: column;
@@ -25,8 +24,9 @@ article {
   border-radius: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  width: 100%;
   max-width: 585px;
+
+  margin: 1.5rem;
 }
 
 article header {
@@ -77,6 +77,7 @@ article div.container details p {
 article div.container summary::after {
   content: url('./assets/images/icon-plus.svg');
   cursor: pointer;
+  margin-left: .5rem;
 }
 
 article div.container details[open] summary::after {
@@ -86,4 +87,14 @@ article div.container details[open] summary::after {
 
 article div.container details:nth-child(1) {
   border-top: none;
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+  }
+
+  article h1 {
+    font-size: 2rem;
+  }
 }
